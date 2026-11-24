@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hashir Adnan — AI Automation for Growing Businesses</title>
+<meta name="description" content="AI automations that save growing businesses time and money — lead follow-up, customer support, admin and the repetitive work in between. Book a free automation audit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: { 950: '#0A0C0F', 900: '#111419', 800: '#181C23' },
+          line: '#252A33', text: '#ECEDEF', muted: '#8A919C',
+          signal: { DEFAULT: '#C8F542', 600: '#A9D61F' },
+          flow: '#3DDBC4', ember: '#FF6A3D',
+        },
+        fontFamily: {
+          display: ['"Instrument Serif"', 'Georgia', 'serif'],
+          sans: ['Geist', 'system-ui', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root {
+    --ink-950:#0A0C0F; --ink-900:#111419; --ink-800:#181C23; --line:#252A33;
+    --text:#ECEDEF; --muted:#8A919C; --signal:#C8F542; --signal-600:#A9D61F;
+    --flow:#3DDBC4; --ember:#FF6A3D;
+    --spring: cubic-bezier(.34,1.56,.64,1);
+    --ease-out: cubic-bezier(.16,1,.3,1);
+    --shadow-elev: 0 1px 0 rgba(255,255,255,.04) inset, 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -8px rgba(0,0,0,.5);
+    --shadow-float: 0 1px 0 rgba(255,255,255,.06) inset, 0 2px 4px rgba(0,0,0,.35), 0 24px 48px -12px rgba(0,0,0,.65), 0 0 0 1px rgba(200,245,66,.04);
+  }
+  html { background: var(--ink-950); color-scheme: dark; scroll-behavior: smooth; }
+  body { background: var(--ink-950); color: var(--text); font-family: Geist, system-ui, sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  ::selection { background: var(--signal); color: var(--ink-950); }
+  .grain::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:60; opacity:.06; mix-blend-mode: overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .hero-bg { background:
+      radial-gradient(50% 60% at 78% 30%, rgba(200,245,66,.12), transparent 60%),
+      radial-gradient(35% 45% at 10% 10%, rgba(61,219,196,.08), transparent 60%),
+      radial-gradient(60% 40% at 50% 110%, rgba(200,245,66,.06), transparent 60%); }
+  .grid-lines { background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 56px 56px;
+    mask-image: radial-gradient(70% 60% at 60% 40%, #000 30%, transparent 75%); -webkit-mask-image: radial-gradient(70% 60% at 60% 40%, #000 30%, transparent 75%); }
+  .h-display { font-family:"Instrument Serif", Georgia, serif; font-weight:400; letter-spacing:-0.03em; line-height:1.02; }
+  .eyebrow { font-family:"JetBrains Mono", monospace; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color: var(--muted); }
+  .mono { font-family:"JetBrains Mono", monospace; }
+  .surface-1 { background: var(--ink-900); border:1px solid var(--line); box-shadow: var(--shadow-elev); }
+  .surface-2 { background: var(--ink-800); border:1px solid var(--line); box-shadow: var(--shadow-float); }
+  .measure { max-width: 65ch; }
+
+  /* Buttons (see brand.html) */
+  .btn { position:relative; display:inline-flex; align-items:center; justify-content:center; gap:10px; font-weight:500; border-radius:12px; white-space:nowrap; cursor:pointer; outline:none;
+    transition: transform .35s var(--spring); }
+  .btn .arrow { display:inline-block; transition: transform .35s var(--spring); }
+  .btn::after { content:""; position:absolute; inset:0; border-radius:inherit; opacity:0; transition: opacity .3s var(--ease-out); pointer-events:none; }
+  .btn-sm { height:36px; padding:0 14px; font-size:14px; }
+  .btn-md { height:44px; padding:0 20px; font-size:15px; }
+  .btn-lg { height:52px; padding:0 26px; font-size:16px; }
+  .btn-primary { background: var(--signal); color: var(--ink-950);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.12), 0 1px 2px rgba(10,12,15,.5), 0 8px 24px -6px rgba(200,245,66,.35); }
+  .btn-primary::after { box-shadow: 0 0 0 1px rgba(200,245,66,.5), 0 12px 36px -4px rgba(200,245,66,.55); }
+  .btn-secondary { background: rgba(255,255,255,.02); color: var(--text); box-shadow: inset 0 0 0 1px var(--line); }
+  .btn-secondary::after { box-shadow: inset 0 0 0 1px rgba(200,245,66,.6); }
+  .btn-ghost { padding:2px 0; color: var(--text); border-radius:4px; }
+  .btn-ghost::after { display:none; }
+  .btn-ghost .underline-anim { position:absolute; left:0; right:0; bottom:-2px; height:1px; background: var(--signal); transform-origin:left; transform: scaleX(.35); transition: transform .45s var(--spring); }
+  .btn-icon { width:40px; height:40px; padding:0; background: var(--ink-800); color: var(--text); box-shadow: inset 0 0 0 1px var(--line), var(--shadow-elev); border-radius:10px; }
+  .btn-icon::after { box-shadow: inset 0 0 0 1px rgba(200,245,66,.5); }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:hover::after { opacity:1; }
+  .btn:hover .arrow { transform: translateX(3px); }
+  .btn-ghost:hover .underline-anim { transform: scaleX(1); }
+  .btn:focus-visible { box-shadow: 0 0 0 3px var(--ink-950), 0 0 0 5px var(--signal); }
+  .btn:active { transform: scale(.98); transition-duration:.1s; }
+
+  .navlink { color: var(--muted); border-radius:6px; outline:none; transition: opacity .2s; }
+  .navlink:hover { color: var(--text); }
+  .navlink:focus-visible { box-shadow: 0 0 0 2px var(--signal); color: var(--text); }
+  .navlink:active { opacity:.6; }
+
+  /* Nav floating state */
+  #nav .nav-inner { transition: transform .5s var(--spring); }
+  #nav .nav-bg { opacity:0; transition: opacity .4s var(--ease-out); }
+  #nav.is-scrolled .nav-bg { opacity:1; }
+
+  /* Cards */
+  .card { transition: transform .5s var(--spring); }
+  .card::after { content:""; position:absolute; inset:-1px; border-radius:inherit; pointer-events:none; opacity:0; transition: opacity .4s var(--ease-out);
+    box-shadow: inset 0 0 0 1px rgba(200,245,66,.35), 0 20px 50px -20px rgba(200,245,66,.25); }
+  .card:hover { transform: translateY(-4px); }
+  .card:hover::after { opacity:1; }
+
+  /* Reveal */
+  [data-reveal] { opacity:0; transform: translateY(18px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+  [data-reveal].is-in { opacity:1; transform:none; }
+
+  /* Hero diagram */
+  .node-pulse { animation: nodePulse 3.2s var(--ease-out) infinite; transform-origin:center; transform-box: fill-box; }
+  @keyframes nodePulse { 0%,100% { opacity:.25; transform: scale(1); } 50% { opacity:.7; transform: scale(1.6); } }
+  .blink { animation: blink 1.4s steps(2) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .ticker { animation: ticker 40s linear infinite; }
+  @keyframes ticker { to { transform: translateX(-50%); } }
+
+  /* FAQ */
+  details summary { list-style:none; cursor:pointer; outline:none; }
+  details summary::-webkit-details-marker { display:none; }
+  details summary:focus-visible { box-shadow: 0 0 0 2px var(--signal); border-radius:12px; }
+  details .plus { transition: transform .4s var(--spring); }
+  details[open] .plus { transform: rotate(45deg); }
+  details summary:hover .q { opacity:.8; }
+  details summary:active .q { opacity:.6; }
+
+  /* Mobile menu */
+  #mobileMenu { opacity:0; transform: translateY(-8px); pointer-events:none; transition: opacity .3s var(--ease-out), transform .4s var(--spring); }
+  #mobileMenu.open { opacity:1; transform:none; pointer-events:auto; }
+
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation:none !important; transition-duration:0s !important; } [data-reveal] { opacity:1; transform:none; } }
+</style>
+</head>
+<body class="grain">
+
+<!-- ============ NAV ============ -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 px-4 pt-3">
+  <div class="nav-inner relative max-w-6xl mx-auto h-14 flex items-center justify-between rounded-2xl px-3 sm:px-4">
+    <div class="nav-bg absolute inset-0 rounded-2xl surface-2" style="background:rgba(24,28,35,.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);"></div>
+    <a href="#top" class="navlink relative flex items-center gap-3 !text-text" aria-label="Hashir Adnan — home">
+      <span class="relative grid place-items-center w-8 h-8 rounded-lg surface-2 mono text-[12px] font-medium">HA<span class="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full" style="background:var(--signal); box-shadow:0 0 10px var(--signal)"></span></span>
+      <span class="font-medium tracking-tight">Hashir Adnan</span>
+    </a>
+    <nav class="relative hidden md:flex items-center gap-7 text-[15px]" aria-label="Primary">
+      <a class="navlink" href="#services">Services</a>
+      <a class="navlink" href="#process">Process</a>
+      <a class="navlink" href="#work">Results</a>
+      <a class="navlink" href="#faq">FAQ</a>
+    </nav>
+    <div class="relative flex items-center gap-2">
+      <a href="book.html" class="btn btn-primary btn-sm hidden sm:inline-flex">Book a free audit <span class="arrow">→</span></a>
+      <button id="menuBtn" class="btn btn-icon md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="md:hidden max-w-6xl mx-auto mt-2 rounded-2xl surface-2 p-4" style="background:rgba(24,28,35,.95); backdrop-filter: blur(16px);">
+    <nav class="flex flex-col text-lg" aria-label="Mobile">
+      <a class="navlink py-3 border-b border-line" href="#services">Services</a>
+      <a class="navlink py-3 border-b border-line" href="#process">Process</a>
+      <a class="navlink py-3 border-b border-line" href="#work">Results</a>
+      <a class="navlink py-3" href="#faq">FAQ</a>
+    </nav>
+    <a href="book.html" class="btn btn-primary btn-md w-full mt-3">Book a free audit <span class="arrow">→</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="relative hero-bg pt-32 pb-20 sm:pt-40 lg:pt-44 lg:pb-28 overflow-hidden">
+  <div class="absolute inset-0 grid-lines pointer-events-none" aria-hidden="true"></div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-8 grid lg:grid-cols-[1.1fr_1fr] gap-14 lg:gap-10 items-center">
+    <div>
+      <p class="eyebrow mb-6 flex items-center gap-2" data-reveal><span class="inline-block w-1.5 h-1.5 rounded-full" style="background:var(--signal); box-shadow:0 0 8px var(--signal)"></span>AI automation for growing businesses</p>
+      <h1 class="h-display text-[52px] sm:text-[72px] lg:text-[88px]" data-reveal>Stop doing it<br><em class="text-signal">by hand.</em></h1>
+      <p class="mt-7 text-lg sm:text-xl text-muted measure" data-reveal>I design AI automations that take the repetitive work off your team's plate — follow-ups, admin, support and hand-offs — so you save hours, cut costs and grow without hiring for busywork.</p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-3" data-reveal>
+        <a href="book.html" class="btn btn-primary btn-lg">Book a free automation audit <span class="arrow">→</span></a>
+        <a href="#process" class="btn btn-secondary btn-lg">See how it works</a>
+      </div>
+      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted" data-reveal>
+        <span class="flex items-center gap-2"><span class="text-signal">✓</span>Fixed scope, fixed price</span>
+        <span class="flex items-center gap-2"><span class="text-signal">✓</span>Live in 1–3 weeks</span>
+        <span class="flex items-center gap-2"><span class="text-signal">✓</span>Built on tools you already use</span>
+      </div>
+    </div>
+
+    <!-- Workflow diagram -->
+    <div class="relative" data-reveal aria-hidden="true">
+      <div class="absolute -inset-6 rounded-[32px]" style="background: radial-gradient(50% 50% at 50% 50%, rgba(200,245,66,.10), transparent 70%);"></div>
+      <div class="relative surface-1 rounded-3xl p-4 sm:p-5">
+        <div class="flex items-center justify-between px-1 pb-4 border-b border-line">
+          <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-line"></span><span class="w-2.5 h-2.5 rounded-full bg-line"></span><span class="w-2.5 h-2.5 rounded-full bg-line"></span></div>
+          <span class="mono text-[11px] text-muted">new-lead-flow.yml</span>
+          <span class="mono text-[11px] flex items-center gap-1.5 text-signal"><span class="w-1.5 h-1.5 rounded-full bg-signal blink"></span>RUNNING</span>
+        </div>
+        <svg viewBox="0 0 460 340" class="w-full h-auto mt-2" fill="none">
+          <defs>
+            <linearGradient id="conn" x1="0" x2="1"><stop offset="0" stop-color="#3DDBC4" stop-opacity=".2"/><stop offset="1" stop-color="#3DDBC4" stop-opacity=".7"/></linearGradient>
+          </defs>
+          <!-- connectors -->
+          <path id="p1" d="M118 170 C 150 170, 150 170, 178 170" stroke="url(#conn)" stroke-width="1.5"/>
+          <path id="p2" d="M288 170 C 315 170, 312 62, 340 62" stroke="url(#conn)" stroke-width="1.5"/>
+          <path id="p3" d="M288 170 C 315 170, 315 170, 340 170" stroke="url(#conn)" stroke-width="1.5"/>
+          <path id="p4" d="M288 170 C 315 170, 312 278, 340 278" stroke="url(#conn)" stroke-width="1.5"/>
+          <!-- pulses -->
+          <circle r="3.5" fill="#C8F542"><animateMotion dur="3.2s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.3;1" calcMode="linear"><mpath href="#p1"/></animateMotion></circle>
+          <circle r="3" fill="#C8F542"><animateMotion dur="3.2s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;.55;.85;1" calcMode="linear"><mpath href="#p2"/></animateMotion></circle>
+          <circle r="3" fill="#C8F542"><animateMotion dur="3.2s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;.55;.8;1" calcMode="linear"><mpath href="#p3"/></animateMotion></circle>
+          <circle r="3" fill="#C8F542"><animateMotion dur="3.2s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;.55;.85;1" calcMode="linear"><mpath href="#p4"/></animateMotion></circle>
+
+          <!-- trigger -->
+          <g>
+            <rect x="8" y="136" width="110" height="68" rx="12" fill="#181C23" stroke="#252A33"/>
+            <text x="20" y="158" fill="#8A919C" font-family="JetBrains Mono" font-size="9" letter-spacing=".8">TRIGGER</text>
+            <text x="20" y="178" fill="#ECEDEF" font-family="Geist" font-size="13" font-weight="500">New email</text>
+            <text x="20" y="194" fill="#8A919C" font-family="Geist" font-size="11">Gmail · inbox</text>
+          </g>
+          <!-- AI -->
+          <g>
+            <circle cx="233" cy="170" r="66" fill="#C8F542" opacity=".05"/>
+            <rect x="178" y="122" width="110" height="96" rx="14" fill="#181C23" stroke="#C8F542" stroke-opacity=".55"/>
+            <circle class="node-pulse" cx="270" cy="138" r="4" fill="#C8F542"/>
+            <circle cx="270" cy="138" r="2.5" fill="#C8F542"/>
+            <text x="192" y="146" fill="#C8F542" font-family="JetBrains Mono" font-size="9" letter-spacing=".8">AI STEP</text>
+            <text x="192" y="167" fill="#ECEDEF" font-family="Geist" font-size="13" font-weight="500">Classify &amp;</text>
+            <text x="192" y="184" fill="#ECEDEF" font-family="Geist" font-size="13" font-weight="500">extract data</text>
+            <text x="192" y="204" fill="#8A919C" font-family="Geist" font-size="11">LLM · 1.2s</text>
+          </g>
+          <!-- actions -->
+          <g>
+            <rect x="340" y="32" width="114" height="60" rx="12" fill="#111419" stroke="#252A33"/>
+            <text x="352" y="54" fill="#8A919C" font-family="JetBrains Mono" font-size="9" letter-spacing=".8">ACTION</text>
+            <text x="352" y="74" fill="#ECEDEF" font-family="Geist" font-size="12.5" font-weight="500">Log to CRM</text>
+          </g>
+          <g>
+            <rect x="340" y="140" width="114" height="60" rx="12" fill="#111419" stroke="#252A33"/>
+            <text x="352" y="162" fill="#8A919C" font-family="JetBrains Mono" font-size="9" letter-spacing=".8">ACTION</text>
+            <text x="352" y="182" fill="#ECEDEF" font-family="Geist" font-size="12.5" font-weight="500">Draft the reply</text>
+          </g>
+          <g>
+            <rect x="340" y="248" width="114" height="60" rx="12" fill="#111419" stroke="#252A33"/>
+            <text x="352" y="270" fill="#8A919C" font-family="JetBrains Mono" font-size="9" letter-spacing=".8">ACTION</text>
+            <text x="352" y="290" fill="#ECEDEF" font-family="Geist" font-size="12.5" font-weight="500">Ping sales</text>
+          </g>
+        </svg>
+        <div class="mt-2 grid grid-cols-3 gap-2">
+          <div class="rounded-xl bg-ink-950/60 border border-line px-3 py-2.5"><p class="mono text-[10px] text-muted">RUNS TODAY</p><p class="mono text-lg text-text">148</p></div>
+          <div class="rounded-xl bg-ink-950/60 border border-line px-3 py-2.5"><p class="mono text-[10px] text-muted">HOURS SAVED</p><p class="mono text-lg text-signal">6.2h</p></div>
+          <div class="rounded-xl bg-ink-950/60 border border-line px-3 py-2.5"><p class="mono text-[10px] text-muted">SAVED / MO</p><p class="mono text-lg text-text">$2.4k</p></div>
+        </div>
+      </div>
+      <!-- floating toast -->
+      <div class="hidden sm:flex absolute -right-6 -bottom-11 surface-2 rounded-2xl px-4 py-3 items-center gap-3">
+        <span class="grid place-items-center w-8 h-8 rounded-lg" style="background:rgba(200,245,66,.12); color:var(--signal)">✓</span>
+        <div><p class="text-sm font-medium leading-tight">New lead booked a call</p><p class="mono text-[11px] text-muted leading-tight mt-0.5">Replied in 38s · 2:14 am</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STACK STRIP ============ -->
+<section class="border-y border-line bg-ink-900/40 py-6 overflow-hidden" aria-label="Tools I work with">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-10">
+    <p class="eyebrow shrink-0">Works with the tools you already use</p>
+    <div class="relative overflow-hidden flex-1" style="mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);">
+      <div class="ticker flex w-max gap-12 mono text-[15px] text-muted">
+        <span>Google Workspace</span><span>Microsoft 365</span><span>Claude</span><span>OpenAI</span><span>Gmail</span><span>Slack</span><span>WhatsApp</span><span>HubSpot</span><span>Shopify</span><span>Notion</span><span>Calendly</span><span>Zapier</span><span>Make</span><span>Webhooks / APIs</span>
+        <span>Google Workspace</span><span>Microsoft 365</span><span>Claude</span><span>OpenAI</span><span>Gmail</span><span>Slack</span><span>WhatsApp</span><span>HubSpot</span><span>Shopify</span><span>Notion</span><span>Calendly</span><span>Zapier</span><span>Make</span><span>Webhooks / APIs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM → OUTCOME ============ -->
+<section class="py-24 sm:py-32">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8">
+    <div class="max-w-3xl" data-reveal>
+      <p class="eyebrow mb-4">01 — The problem</p>
+      <h2 class="h-display text-[40px] sm:text-[56px]">Your team is talented. <em class="text-muted">So why are they doing robot work?</em></h2>
+    </div>
+    <div class="mt-14 grid md:grid-cols-3 gap-4">
+      <article class="card relative surface-1 rounded-2xl p-6 sm:p-7" data-reveal>
+        <p class="mono text-[11px] flex items-center gap-2" style="color:var(--ember)"><span class="w-1.5 h-1.5 rounded-full" style="background:var(--ember)"></span>BEFORE</p>
+        <p class="mt-3 text-text">New leads wait hours — sometimes days — for a reply, and half of them go cold before anyone follows up.</p>
+        <div class="my-6 h-px bg-line relative"><span class="absolute left-1/2 -translate-x-1/2 -top-3 surface-2 rounded-full w-6 h-6 grid place-items-center text-xs text-signal">↓</span></div>
+        <p class="mono text-[11px] flex items-center gap-2 text-signal"><span class="w-1.5 h-1.5 rounded-full bg-signal"></span>AFTER</p>
+        <p class="mt-3 text-text">Every lead gets a personal reply in under a minute, is qualified, and is booked straight into your calendar.</p>
+      </article>
+      <article class="card relative surface-1 rounded-2xl p-6 sm:p-7" data-reveal>
+        <p class="mono text-[11px] flex items-center gap-2" style="color:var(--ember)"><span class="w-1.5 h-1.5 rounded-full" style="background:var(--ember)"></span>BEFORE</p>
+        <p class="mt-3 text-text">Your team answers the same customer questions fifty times a week — and customers still wait.</p>
+        <div class="my-6 h-px bg-line relative"><span class="absolute left-1/2 -translate-x-1/2 -top-3 surface-2 rounded-full w-6 h-6 grid place-items-center text-xs text-signal">↓</span></div>
+        <p class="mono text-[11px] flex items-center gap-2 text-signal"><span class="w-1.5 h-1.5 rounded-full bg-signal"></span>AFTER</p>
+        <p class="mt-3 text-text">An AI assistant answers instantly, 24/7, and hands the tricky cases to a human with the full context.</p>
+      </article>
+      <article class="card relative surface-1 rounded-2xl p-6 sm:p-7" data-reveal>
+        <p class="mono text-[11px] flex items-center gap-2" style="color:var(--ember)"><span class="w-1.5 h-1.5 rounded-full" style="background:var(--ember)"></span>BEFORE</p>
+        <p class="mt-3 text-text">Onboarding, invoices and scheduling eat your mornings in back-and-forth emails and manual steps.</p>
+        <div class="my-6 h-px bg-line relative"><span class="absolute left-1/2 -translate-x-1/2 -top-3 surface-2 rounded-full w-6 h-6 grid place-items-center text-xs text-signal">↓</span></div>
+        <p class="mono text-[11px] flex items-center gap-2 text-signal"><span class="w-1.5 h-1.5 rounded-full bg-signal"></span>AFTER</p>
+        <p class="mt-3 text-text">New clients onboard themselves, invoices go out on time, and meetings book without the email ping-pong.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="py-24 sm:py-32 border-t border-line relative">
+  <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(40% 50% at 100% 0%, rgba(61,219,196,.06), transparent 60%);"></div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6" data-reveal>
+      <div class="max-w-2xl">
+        <p class="eyebrow mb-4">02 — Services</p>
+        <h2 class="h-display text-[40px] sm:text-[56px]">What I <em>automate</em></h2>
+      </div>
+      <p class="text-muted measure lg:max-w-sm">Practical systems, not science projects. Each one is built around a task your team repeats every week.</p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 gap-4">
+      <article class="card relative surface-1 rounded-2xl p-7 sm:p-8" data-reveal>
+        <div class="flex items-start justify-between">
+          <span class="grid place-items-center w-11 h-11 rounded-xl surface-2 text-signal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.5 12h4l5-6M11.5 12l5 6"/></svg></span>
+          <span class="mono text-xs text-muted">/01</span>
+        </div>
+        <h3 class="mt-8 text-[22px] sm:text-[24px] font-medium tracking-tight leading-snug">Workflow automation</h3>
+        <p class="mt-3 text-muted">Connect the apps you already pay for so work moves on its own — a form comes in, a client gets set up, the team gets notified. Nobody lifts a finger.</p>
+        <p class="mt-6 mono text-xs text-muted">Zapier · Make · APIs · Webhooks</p>
+      </article>
+      <article class="card relative surface-1 rounded-2xl p-7 sm:p-8" data-reveal>
+        <div class="flex items-start justify-between">
+          <span class="grid place-items-center w-11 h-11 rounded-xl surface-2 text-signal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span>
+          <span class="mono text-xs text-muted">/02</span>
+        </div>
+        <h3 class="mt-8 text-[22px] sm:text-[24px] font-medium tracking-tight leading-snug">AI assistants &amp; agents</h3>
+        <p class="mt-3 text-muted">AI agents that read, reply and take action — managing your inbox, drafting emails, or answering customers on your website and WhatsApp.</p>
+        <p class="mt-6 mono text-xs text-muted">Claude · OpenAI · Custom agents</p>
+      </article>
+      <article class="card relative surface-1 rounded-2xl p-7 sm:p-8" data-reveal>
+        <div class="flex items-start justify-between">
+          <span class="grid place-items-center w-11 h-11 rounded-xl surface-2 text-signal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18l-7 8.5V18l-4 2v-7.5z"/></svg></span>
+          <span class="mono text-xs text-muted">/03</span>
+        </div>
+        <h3 class="mt-8 text-[22px] sm:text-[24px] font-medium tracking-tight leading-snug">Sales &amp; lead automation</h3>
+        <p class="mt-3 text-muted">Capture every lead, reply instantly, follow up on schedule and book calls automatically — so no opportunity slips through the cracks.</p>
+        <p class="mt-6 mono text-xs text-muted">CRM · Email · Calendly · WhatsApp</p>
+      </article>
+      <article class="card relative surface-1 rounded-2xl p-7 sm:p-8" data-reveal>
+        <div class="flex items-start justify-between">
+          <span class="grid place-items-center w-11 h-11 rounded-xl surface-2 text-signal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.4A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg></span>
+          <span class="mono text-xs text-muted">/04</span>
+        </div>
+        <h3 class="mt-8 text-[22px] sm:text-[24px] font-medium tracking-tight leading-snug">Customer support &amp; operations</h3>
+        <p class="mt-3 text-muted">Instant answers for customers plus automated onboarding, invoicing and scheduling — the back-office work that keeps you busy but doesn't grow the business.</p>
+        <p class="mt-6 mono text-xs text-muted">AI chat · Helpdesk · Invoicing</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process" class="py-24 sm:py-32 border-t border-line bg-ink-900/30">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8">
+    <div class="max-w-2xl" data-reveal>
+      <p class="eyebrow mb-4">03 — Process</p>
+      <h2 class="h-display text-[40px] sm:text-[56px]">From busywork to <em>autopilot</em> in four steps</h2>
+    </div>
+
+    <ol class="mt-16 relative grid md:grid-cols-4 gap-10 md:gap-6">
+      <div class="hidden md:block absolute top-[22px] left-[22px] right-[22px] h-px" style="background: linear-gradient(90deg, var(--signal), rgba(61,219,196,.5) 50%, var(--line));" aria-hidden="true"></div>
+      <li class="relative" data-reveal>
+        <span class="relative grid place-items-center w-11 h-11 rounded-full mono text-sm" style="background:var(--signal); color:var(--ink-950); box-shadow: 0 0 0 6px var(--ink-950), 0 0 24px rgba(200,245,66,.4)">01</span>
+        <h3 class="mt-6 text-xl font-medium tracking-tight">Free audit</h3>
+        <p class="mt-2 text-muted text-[15px]">A 30-minute call where we map your repetitive tasks and find the ones worth automating first.</p>
+        <p class="mt-3 mono text-xs text-muted">30 min · free</p>
+      </li>
+      <li class="relative" data-reveal>
+        <span class="relative grid place-items-center w-11 h-11 rounded-full surface-2 mono text-sm text-text" style="box-shadow: 0 0 0 6px var(--ink-950)">02</span>
+        <h3 class="mt-6 text-xl font-medium tracking-tight">Blueprint</h3>
+        <p class="mt-2 text-muted text-[15px]">You get a clear plan: what gets automated, the tools involved, the hours saved, and a fixed price.</p>
+        <p class="mt-3 mono text-xs text-muted">2–3 days</p>
+      </li>
+      <li class="relative" data-reveal>
+        <span class="relative grid place-items-center w-11 h-11 rounded-full surface-2 mono text-sm text-text" style="box-shadow: 0 0 0 6px var(--ink-950)">03</span>
+        <h3 class="mt-6 text-xl font-medium tracking-tight">Build &amp; test</h3>
+        <p class="mt-2 text-muted text-[15px]">I build it on your tools and test it against real scenarios, with check-ins so nothing is a surprise.</p>
+        <p class="mt-3 mono text-xs text-muted">1–3 weeks</p>
+      </li>
+      <li class="relative" data-reveal>
+        <span class="relative grid place-items-center w-11 h-11 rounded-full surface-2 mono text-sm text-text" style="box-shadow: 0 0 0 6px var(--ink-950)">04</span>
+        <h3 class="mt-6 text-xl font-medium tracking-tight">Handoff &amp; support</h3>
+        <p class="mt-2 text-muted text-[15px]">Documentation, a walkthrough for your team, and 30 days of support. You own everything.</p>
+        <p class="mt-3 mono text-xs text-muted">30 days included</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ RESULTS ============ -->
+<section id="work" class="py-24 sm:py-32 border-t border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6" data-reveal>
+      <div class="max-w-2xl">
+        <p class="eyebrow mb-4">04 — The payoff</p>
+        <h2 class="h-display text-[40px] sm:text-[56px]">Time back. <em>Money saved.</em></h2>
+      </div>
+      <p class="text-muted measure lg:max-w-sm">What automating a single workflow typically delivers. Your free audit puts real numbers on it for your business.</p>
+    </div>
+
+    <div class="mt-14 grid lg:grid-cols-3 gap-4">
+      <article class="card relative surface-1 rounded-2xl p-7 sm:p-8 flex flex-col" data-reveal>
+        <p class="eyebrow">Lead follow-up</p>
+        <p class="mono text-[64px] sm:text-[72px] leading-none tracking-tight text-signal mt-8">&lt;60s</p>
+        <p class="mt-2 text-sm text-muted">reply time to every new lead</p>
+        <p class="mt-8 text-text flex-1">Instant, personal replies and automatic follow-ups mean fewer leads go cold — and more of them turn into booked calls and paying customers.</p>
+        <p class="mt-6 pt-5 border-t border-line mono text-xs text-muted">More revenue from the same traffic</p>
+      </article>
+      <article class="card relative surface-1 rounded-2xl p-7 sm:p-8 flex flex-col" data-reveal>
+        <p class="eyebrow">Customer support</p>
+        <p class="mono text-[64px] sm:text-[72px] leading-none tracking-tight text-signal mt-8">24/7</p>
+        <p class="mt-2 text-sm text-muted">answers, even while you sleep</p>
+        <p class="mt-8 text-text flex-1">An AI assistant handles the repetitive questions around the clock, so your team only spends time on the conversations that need a person.</p>
+        <p class="mt-6 pt-5 border-t border-line mono text-xs text-muted">Happier customers, smaller workload</p>
+      </article>
+      <article class="card relative surface-1 rounded-2xl p-7 sm:p-8 flex flex-col" data-reveal>
+        <p class="eyebrow">Admin &amp; operations</p>
+        <p class="mono text-[64px] sm:text-[72px] leading-none tracking-tight text-signal mt-8">10h+</p>
+        <p class="mt-2 text-sm text-muted">back per person, per week</p>
+        <p class="mt-8 text-text flex-1">Onboarding, invoicing, scheduling and hand-offs run on their own — that's time and salary going to growth instead of busywork.</p>
+        <p class="mt-6 pt-5 border-t border-line mono text-xs text-muted">Scale without hiring for busywork</p>
+      </article>
+    </div>
+    <p class="mt-6 text-sm text-muted" data-reveal>Figures are typical ranges for small-business automations, not guarantees. From my own work: <span class="text-text">AI workflows that cut manual effort by 20%</span> for a US-based team.</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="py-24 sm:py-32 border-t border-line bg-ink-900/30">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20 items-center">
+    <div class="relative max-w-md mx-auto lg:mx-0 w-full" data-reveal>
+      <div class="absolute -inset-4 rounded-[28px]" style="background: radial-gradient(60% 60% at 30% 30%, rgba(200,245,66,.12), transparent 70%);" aria-hidden="true"></div>
+      <div class="relative rounded-3xl overflow-hidden surface-1 aspect-[4/5]">
+        <img src="https://placehold.co/800x1000/181C23/8A919C?text=Your+Photo" alt="Portrait of Hashir Adnan" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 mix-blend-multiply" style="background: linear-gradient(160deg, rgba(61,219,196,.25), rgba(200,245,66,.18));"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5 surface-2 rounded-2xl px-4 py-3 flex items-center justify-between" style="background:rgba(24,28,35,.85); backdrop-filter: blur(10px);">
+          <div><p class="text-sm font-medium">Hashir Adnan</p><p class="mono text-[11px] text-muted">AI Automation · Pakistan → Worldwide</p></div>
+          <span class="flex items-center gap-1.5 mono text-[11px] text-signal"><span class="w-1.5 h-1.5 rounded-full bg-signal blink"></span>Available</span>
+        </div>
+      </div>
+    </div>
+    <div data-reveal>
+      <p class="eyebrow mb-4">05 — About</p>
+      <h2 class="h-display text-[40px] sm:text-[56px]">The person who <em>builds the fix</em></h2>
+      <div class="mt-8 space-y-5 text-muted text-lg measure">
+        <p>I'm Hashir. For the past three years I've been building AI-powered workflows inside a fast-moving US-based company — automating the repetitive work that used to eat entire afternoons.</p>
+        <p>I kept seeing the same thing in every team: smart people losing hours to tasks a system could handle. Today, AI makes those systems faster and cheaper to build than ever.</p>
+        <p class="text-text">Now I help growing businesses do the same — save time, cut costs and scale without hiring for busywork.</p>
+      </div>
+      <dl class="mt-10 grid grid-cols-3 gap-4 max-w-lg">
+        <div><dt class="mono text-[11px] text-muted uppercase tracking-wider">Experience</dt><dd class="mono text-2xl mt-1">3 yrs</dd></div>
+        <div><dt class="mono text-[11px] text-muted uppercase tracking-wider">Manual work</dt><dd class="mono text-2xl mt-1">−20%</dd></div>
+        <div><dt class="mono text-[11px] text-muted uppercase tracking-wider">Works</dt><dd class="mono text-2xl mt-1">Remote</dd></div>
+      </dl>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="btn btn-ghost mt-10 text-[15px]"><span class="relative">Connect on LinkedIn<span class="underline-anim"></span></span><span class="arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENGAGEMENTS ============ -->
+<section class="py-24 sm:py-32 border-t border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8">
+    <div class="max-w-2xl" data-reveal>
+      <p class="eyebrow mb-4">06 — Ways to work together</p>
+      <h2 class="h-display text-[40px] sm:text-[56px]">Start small. <em>Scale what works.</em></h2>
+    </div>
+    <div class="mt-14 grid lg:grid-cols-3 gap-4 items-stretch">
+      <article class="card relative surface-1 rounded-2xl p-7 sm:p-8 flex flex-col" data-reveal>
+        <p class="eyebrow">Step one</p>
+        <h3 class="mt-4 text-[24px] font-medium tracking-tight">Free Automation Audit</h3>
+        <p class="mt-2 text-muted">A focused call to find your three biggest time-sinks and what automating them would save.</p>
+        <ul class="mt-6 space-y-2.5 text-[15px] flex-1">
+          <li class="flex gap-3"><span class="text-signal">✓</span>30-minute discovery call</li>
+          <li class="flex gap-3"><span class="text-signal">✓</span>Top 3 automation opportunities</li>
+          <li class="flex gap-3"><span class="text-signal">✓</span>Honest hours-saved estimate</li>
+        </ul>
+        <a href="book.html" class="btn btn-secondary btn-md mt-8 w-full">Book the audit</a>
+      </article>
+      <article class="card relative surface-2 rounded-2xl p-7 sm:p-8 flex flex-col lg:-my-3" data-reveal style="border-color: rgba(200,245,66,.35); box-shadow: var(--shadow-float), 0 30px 60px -30px rgba(200,245,66,.25);">
+        <div class="flex items-center justify-between"><p class="eyebrow">Most popular</p><span class="mono text-[10px] px-2.5 py-1 rounded-full" style="background:rgba(200,245,66,.12); color:var(--signal)">FIXED PRICE</span></div>
+        <h3 class="mt-4 text-[24px] font-medium tracking-tight">Automation Sprint</h3>
+        <p class="mt-2 text-muted">One high-impact workflow, designed, built and handed over — live in one to three weeks.</p>
+        <ul class="mt-6 space-y-2.5 text-[15px] flex-1">
+          <li class="flex gap-3"><span class="text-signal">✓</span>Blueprint with fixed scope &amp; price</li>
+          <li class="flex gap-3"><span class="text-signal">✓</span>Built and tested on your real data</li>
+          <li class="flex gap-3"><span class="text-signal">✓</span>Docs + team walkthrough</li>
+          <li class="flex gap-3"><span class="text-signal">✓</span>30 days of support</li>
+        </ul>
+        <a href="book.html" class="btn btn-primary btn-md mt-8 w-full">Start with a free audit <span class="arrow">→</span></a>
+      </article>
+      <article class="card relative surface-1 rounded-2xl p-7 sm:p-8 flex flex-col" data-reveal>
+        <p class="eyebrow">Ongoing</p>
+        <h3 class="mt-4 text-[24px] font-medium tracking-tight">Automation Partner</h3>
+        <p class="mt-2 text-muted">A monthly retainer to keep automating, maintaining and improving as your business grows.</p>
+        <ul class="mt-6 space-y-2.5 text-[15px] flex-1">
+          <li class="flex gap-3"><span class="text-signal">✓</span>New automations every month</li>
+          <li class="flex gap-3"><span class="text-signal">✓</span>Monitoring &amp; maintenance</li>
+          <li class="flex gap-3"><span class="text-signal">✓</span>Priority support</li>
+        </ul>
+        <a href="book.html" class="btn btn-secondary btn-md mt-8 w-full">Talk about a retainer</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="py-24 sm:py-32 border-t border-line bg-ink-900/30">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 grid lg:grid-cols-[0.8fr_1.2fr] gap-12">
+    <div data-reveal>
+      <p class="eyebrow mb-4">07 — FAQ</p>
+      <h2 class="h-display text-[40px] sm:text-[56px]">Questions, <em>answered</em></h2>
+      <p class="mt-6 text-muted">Something else on your mind? Ask it on the audit call — no pitch, no pressure.</p>
+    </div>
+    <div class="space-y-3" data-reveal>
+      <details class="surface-1 rounded-2xl" open>
+        <summary class="flex items-center justify-between gap-4 p-5 sm:p-6"><span class="q text-[17px] font-medium transition-opacity">What kind of tasks can you automate?</span><span class="plus btn-icon btn shrink-0 !w-8 !h-8 text-lg" aria-hidden="true">+</span></summary>
+        <p class="px-5 sm:px-6 pb-6 -mt-1 text-muted measure">If your team does it every week, it can probably be automated: lead follow-up, customer questions, appointment booking, client onboarding, invoicing, email management, CRM updates, social and content workflows, and hand-offs between apps.</p>
+      </details>
+      <details class="surface-1 rounded-2xl">
+        <summary class="flex items-center justify-between gap-4 p-5 sm:p-6"><span class="q text-[17px] font-medium transition-opacity">Do I need to change the tools I use?</span><span class="plus btn-icon btn shrink-0 !w-8 !h-8 text-lg" aria-hidden="true">+</span></summary>
+        <p class="px-5 sm:px-6 pb-6 -mt-1 text-muted measure">Almost never. I build on top of what you already use — Google Workspace, Microsoft 365, Slack, your CRM or database — so your team doesn't have to learn anything new.</p>
+      </details>
+      <details class="surface-1 rounded-2xl">
+        <summary class="flex items-center justify-between gap-4 p-5 sm:p-6"><span class="q text-[17px] font-medium transition-opacity">How much does it cost?</span><span class="plus btn-icon btn shrink-0 !w-8 !h-8 text-lg" aria-hidden="true">+</span></summary>
+        <p class="px-5 sm:px-6 pb-6 -mt-1 text-muted measure">Every project is fixed-price, agreed before any work starts, and based on scope. The audit is free, and you'll know the exact cost — and the time and money it should save you — before you commit.</p>
+      </details>
+      <details class="surface-1 rounded-2xl">
+        <summary class="flex items-center justify-between gap-4 p-5 sm:p-6"><span class="q text-[17px] font-medium transition-opacity">Is my data safe?</span><span class="plus btn-icon btn shrink-0 !w-8 !h-8 text-lg" aria-hidden="true">+</span></summary>
+        <p class="px-5 sm:px-6 pb-6 -mt-1 text-muted measure">Yes. Automations run inside your own accounts, I use least-privilege access, and I'm used to working under strict compliance requirements in a regulated industry. Happy to sign an NDA.</p>
+      </details>
+      <details class="surface-1 rounded-2xl">
+        <summary class="flex items-center justify-between gap-4 p-5 sm:p-6"><span class="q text-[17px] font-medium transition-opacity">What happens if something breaks?</span><span class="plus btn-icon btn shrink-0 !w-8 !h-8 text-lg" aria-hidden="true">+</span></summary>
+        <p class="px-5 sm:px-6 pb-6 -mt-1 text-muted measure">Every build includes error alerts and 30 days of support. After that, you can fix small things using the docs I hand over, or move to a monthly partner plan.</p>
+      </details>
+      <details class="surface-1 rounded-2xl">
+        <summary class="flex items-center justify-between gap-4 p-5 sm:p-6"><span class="q text-[17px] font-medium transition-opacity">Do you work with clients outside Pakistan?</span><span class="plus btn-icon btn shrink-0 !w-8 !h-8 text-lg" aria-hidden="true">+</span></summary>
+        <p class="px-5 sm:px-6 pb-6 -mt-1 text-muted measure">Yes — I already work remotely with a US-based team, and I schedule calls to overlap with US, UK, Gulf and European hours.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section id="book" class="relative py-24 sm:py-32 border-t border-line overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(45% 70% at 50% 100%, rgba(200,245,66,.14), transparent 70%), radial-gradient(30% 40% at 15% 20%, rgba(61,219,196,.07), transparent 70%);"></div>
+  <div class="absolute inset-0 grid-lines pointer-events-none opacity-60" aria-hidden="true"></div>
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-8 text-center" data-reveal>
+    <p class="eyebrow mb-6">Free · 30 minutes · No obligation</p>
+    <h2 class="h-display text-[48px] sm:text-[72px] lg:text-[88px]">Get your hours <em class="text-signal">back.</em></h2>
+    <p class="mt-6 text-lg text-muted max-w-xl mx-auto">Book a free automation audit. You'll leave with three concrete things to automate — whether or not we work together.</p>
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+      <a href="book.html" class="btn btn-primary btn-lg w-full sm:w-auto">Book a free automation audit <span class="arrow">→</span></a>
+      <a href="#services" class="btn btn-secondary btn-lg w-full sm:w-auto">Explore services</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <span class="relative grid place-items-center w-8 h-8 rounded-lg surface-2 mono text-[12px] font-medium">HA<span class="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full" style="background:var(--signal); box-shadow:0 0 10px var(--signal)"></span></span>
+      <span class="text-sm text-muted">© 2026 Hashir Adnan · AI Automation</span>
+    </div>
+    <nav class="flex flex-wrap gap-6 text-sm" aria-label="Footer">
+      <a class="navlink" href="#services">Services</a>
+      <a class="navlink" href="#work">Work</a>
+      <a class="navlink" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="navlink" href="brand.html">Brand guidelines</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Nav floating state
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 24);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); }));
+
+  // Reveal on scroll (staggered within a section)
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const siblings = [...e.target.parentElement.querySelectorAll(':scope > [data-reveal]')];
+      e.target.style.transitionDelay = (Math.max(0, siblings.indexOf(e.target)) * 70) + 'ms';
+      e.target.classList.add('is-in');
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Whitelist: publish ONLY the website files.
+# Everything else in this folder (resume, PDFs, screenshots, node_modules, notes) stays private.
+*
+!.gitignore
+!index.html
+!book.html
+!brand.html
+!README.md

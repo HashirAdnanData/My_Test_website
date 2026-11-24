@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hashir Adnan — Brand Guidelines</title>
+<meta name="description" content="Brand guidelines: color, typography, buttons, spacing and elevation for Hashir Adnan — AI Automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: { 950: '#0A0C0F', 900: '#111419', 800: '#181C23' },
+          line: '#252A33', text: '#ECEDEF', muted: '#8A919C',
+          signal: { DEFAULT: '#C8F542', 600: '#A9D61F' },
+          flow: '#3DDBC4', ember: '#FF6A3D',
+        },
+        fontFamily: {
+          display: ['"Instrument Serif"', 'Georgia', 'serif'],
+          sans: ['Geist', 'system-ui', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root {
+    --ink-950:#0A0C0F; --ink-900:#111419; --ink-800:#181C23; --line:#252A33;
+    --text:#ECEDEF; --muted:#8A919C; --signal:#C8F542; --signal-600:#A9D61F;
+    --flow:#3DDBC4; --ember:#FF6A3D;
+    --spring: cubic-bezier(.34,1.56,.64,1);
+    --ease-out: cubic-bezier(.16,1,.3,1);
+    --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-6:24px; --s-8:32px; --s-12:48px; --s-16:64px; --s-24:96px; --s-32:128px;
+    --shadow-elev: 0 1px 0 rgba(255,255,255,.04) inset, 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -8px rgba(0,0,0,.5);
+    --shadow-float: 0 1px 0 rgba(255,255,255,.06) inset, 0 2px 4px rgba(0,0,0,.35), 0 24px 48px -12px rgba(0,0,0,.65), 0 0 0 1px rgba(200,245,66,.04);
+  }
+  html { background: var(--ink-950); color-scheme: dark; }
+  body { background: var(--ink-950); color: var(--text); font-family: Geist, system-ui, sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  .grain::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:50; opacity:.06; mix-blend-mode: overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .glow-bg { background:
+      radial-gradient(60% 50% at 85% 0%, rgba(200,245,66,.10), transparent 60%),
+      radial-gradient(40% 40% at 0% 20%, rgba(61,219,196,.07), transparent 60%),
+      radial-gradient(80% 60% at 50% 120%, rgba(200,245,66,.05), transparent 60%); }
+  .h-display { font-family:"Instrument Serif", Georgia, serif; font-weight:400; letter-spacing:-0.03em; line-height:1.02; }
+  .eyebrow { font-family:"JetBrains Mono", monospace; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color: var(--muted); }
+  .surface-1 { background: var(--ink-900); border:1px solid var(--line); box-shadow: var(--shadow-elev); }
+  .surface-2 { background: var(--ink-800); border:1px solid var(--line); box-shadow: var(--shadow-float); }
+
+  /* ---------- Buttons ---------- */
+  .btn { position:relative; display:inline-flex; align-items:center; justify-content:center; gap:10px; font-family:Geist, sans-serif; font-weight:500; border-radius:12px; white-space:nowrap; cursor:pointer; user-select:none;
+    transition: transform .35s var(--spring); outline:none; }
+  .btn .arrow { display:inline-block; transition: transform .35s var(--spring); }
+  .btn::after { content:""; position:absolute; inset:0; border-radius:inherit; opacity:0; transition: opacity .3s var(--ease-out); pointer-events:none; }
+  .btn-sm { height:36px; padding:0 14px; font-size:14px; }
+  .btn-md { height:44px; padding:0 20px; font-size:15px; }
+  .btn-lg { height:52px; padding:0 26px; font-size:16px; }
+
+  .btn-primary { background: var(--signal); color: var(--ink-950);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.12), 0 1px 2px rgba(10,12,15,.5), 0 8px 24px -6px rgba(200,245,66,.35); }
+  .btn-primary::after { box-shadow: 0 0 0 1px rgba(200,245,66,.5), 0 12px 36px -4px rgba(200,245,66,.55); }
+  .btn-secondary { background: rgba(255,255,255,.02); color: var(--text); box-shadow: inset 0 0 0 1px var(--line); }
+  .btn-secondary::after { box-shadow: inset 0 0 0 1px rgba(200,245,66,.6); }
+  .btn-ghost { height:auto; padding:2px 0; color: var(--text); border-radius:4px; }
+  .btn-ghost .label { background: linear-gradient(var(--signal),var(--signal)) 0 100%/100% 1px no-repeat; }
+  .btn-ghost::after { display:none; }
+  .btn-ghost .underline-anim { position:absolute; left:0; right:22px; bottom:0; height:1px; background: var(--signal); transform-origin:left; transform: scaleX(.35); transition: transform .45s var(--spring); }
+  .btn-icon { width:40px; height:40px; padding:0; background: var(--ink-800); color: var(--text); box-shadow: inset 0 0 0 1px var(--line), var(--shadow-elev); border-radius:10px; }
+  .btn-icon::after { box-shadow: inset 0 0 0 1px rgba(200,245,66,.5); }
+
+  .btn:hover, .btn.is-hover { transform: translateY(-1px); }
+  .btn:hover::after, .btn.is-hover::after { opacity:1; }
+  .btn:hover .arrow, .btn.is-hover .arrow { transform: translateX(3px); }
+  .btn-ghost:hover .underline-anim, .btn-ghost.is-hover .underline-anim { transform: scaleX(1); }
+  .btn:focus-visible, .btn.is-focus { box-shadow: 0 0 0 3px var(--ink-950), 0 0 0 5px var(--signal); }
+  .btn:active, .btn.is-active { transform: scale(.98); transition-duration:.1s; }
+  .btn:disabled, .btn.is-disabled { opacity:.4; pointer-events:none; }
+
+  .navlink { color: var(--muted); transition: opacity .2s; border-radius:6px; outline:none; }
+  .navlink:hover { color: var(--text); }
+  .navlink:focus-visible { box-shadow: 0 0 0 2px var(--signal); }
+  .navlink:active { opacity:.7; }
+  .swatch { transition: transform .4s var(--spring); }
+  .swatch:hover { transform: translateY(-3px); }
+  .mono { font-family:"JetBrains Mono", monospace; }
+  @media (prefers-reduced-motion: reduce) { * { transition-duration:0s !important; animation:none !important; } }
+</style>
+</head>
+<body class="grain">
+<div class="glow-bg min-h-screen">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b border-line/70" style="background:rgba(10,12,15,.72); backdrop-filter: blur(14px);">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
+      <a href="index.html" class="navlink flex items-center gap-3 !text-text">
+        <span class="relative grid place-items-center w-8 h-8 rounded-lg surface-2 mono text-[12px] font-medium">HA<span class="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full" style="background:var(--signal); box-shadow:0 0 10px var(--signal)"></span></span>
+        <span class="font-medium tracking-tight">Hashir Adnan</span>
+        <span class="eyebrow hidden sm:inline">/ Brand v1.0</span>
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a class="navlink" href="#color">Color</a><a class="navlink" href="#type">Type</a><a class="navlink" href="#buttons">Buttons</a><a class="navlink" href="#system">System</a><a class="navlink" href="#voice">Voice</a>
+      </nav>
+      <a href="index.html" class="btn btn-secondary btn-sm">View site <span class="arrow">→</span></a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-8">
+
+    <!-- Intro -->
+    <section class="pt-24 pb-24 sm:pt-32">
+      <p class="eyebrow mb-6"><span style="color:var(--signal)">●</span>&nbsp; Brand guidelines · 2026</p>
+      <h1 class="h-display text-[48px] sm:text-[72px] lg:text-[96px] max-w-4xl">Build the system once. <em class="text-signal">Let it run.</em></h1>
+      <p class="mt-8 max-w-[60ch] text-muted text-lg">The visual language of Hashir Adnan — AI Automation. Calm, precise and engineered. Everything is borrowed from the flow diagram: <span class="text-text">nodes</span>, <span class="text-text">connectors</span> and a <span class="text-signal">signal</span> that moves through them.</p>
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="surface-1 rounded-2xl p-6"><p class="eyebrow mb-2">Personality</p><p class="text-text">Calm, precise, quietly confident. An engineer who explains in plain English.</p></div>
+        <div class="surface-1 rounded-2xl p-6"><p class="eyebrow mb-2">Visual motif</p><p class="text-text">Nodes and connectors. One lime pulse = work happening automatically.</p></div>
+        <div class="surface-1 rounded-2xl p-6"><p class="eyebrow mb-2">Golden rule</p><p class="text-text">Lime is the only loud color. Use it on ~5% of any screen, never more.</p></div>
+      </div>
+    </section>
+
+    <!-- 01 Color -->
+    <section id="color" class="py-24 border-t border-line">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+        <div><p class="eyebrow mb-3">01 — Color</p><h2 class="h-display text-[40px] sm:text-[56px]">Ink, signal &amp; flow</h2></div>
+        <p class="text-muted max-w-sm text-sm">Contrast ratios measured against <span class="mono text-text">#0A0C0F</span> (ink-950). All text pairings pass WCAG AA.</p>
+      </div>
+
+      <p class="eyebrow mb-4">Brand</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+        <div class="swatch surface-1 rounded-2xl overflow-hidden">
+          <div class="h-40 relative" style="background:var(--signal)"><span class="absolute bottom-3 left-4 mono text-xs text-ink-950">Primary</span></div>
+          <div class="p-5"><div class="flex justify-between"><p class="font-medium">Signal Lime</p><p class="mono text-sm">#C8F542</p></div><p class="text-muted text-sm mt-1">Primary CTAs, active nodes, key highlights.</p><p class="mono text-xs mt-3 text-signal">15.5 : 1 · AAA</p></div>
+        </div>
+        <div class="swatch surface-1 rounded-2xl overflow-hidden">
+          <div class="h-40 relative" style="background:var(--flow)"><span class="absolute bottom-3 left-4 mono text-xs text-ink-950">Secondary</span></div>
+          <div class="p-5"><div class="flex justify-between"><p class="font-medium">Flow Teal</p><p class="mono text-sm">#3DDBC4</p></div><p class="text-muted text-sm mt-1">Diagram connectors and data accents only.</p><p class="mono text-xs mt-3" style="color:var(--flow)">11.3 : 1 · AAA</p></div>
+        </div>
+        <div class="swatch surface-1 rounded-2xl overflow-hidden">
+          <div class="h-40 relative" style="background:var(--ember)"><span class="absolute bottom-3 left-4 mono text-xs text-ink-950">Utility</span></div>
+          <div class="p-5"><div class="flex justify-between"><p class="font-medium">Ember</p><p class="mono text-sm">#FF6A3D</p></div><p class="text-muted text-sm mt-1">"Before" states, problems, errors.</p><p class="mono text-xs mt-3" style="color:var(--ember)">6.9 : 1 · AA</p></div>
+        </div>
+      </div>
+
+      <p class="eyebrow mb-4">Neutrals</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="swatch rounded-xl overflow-hidden border border-line"><div class="h-24" style="background:#0A0C0F"></div><div class="p-3 bg-ink-900"><p class="text-sm font-medium">Ink 950</p><p class="mono text-xs text-muted">#0A0C0F · base</p></div></div>
+        <div class="swatch rounded-xl overflow-hidden border border-line"><div class="h-24" style="background:#111419"></div><div class="p-3 bg-ink-900"><p class="text-sm font-medium">Ink 900</p><p class="mono text-xs text-muted">#111419 · elevated</p></div></div>
+        <div class="swatch rounded-xl overflow-hidden border border-line"><div class="h-24" style="background:#181C23"></div><div class="p-3 bg-ink-900"><p class="text-sm font-medium">Ink 800</p><p class="mono text-xs text-muted">#181C23 · floating</p></div></div>
+        <div class="swatch rounded-xl overflow-hidden border border-line"><div class="h-24" style="background:#252A33"></div><div class="p-3 bg-ink-900"><p class="text-sm font-medium">Line</p><p class="mono text-xs text-muted">#252A33 · borders</p></div></div>
+        <div class="swatch rounded-xl overflow-hidden border border-line"><div class="h-24" style="background:#8A919C"></div><div class="p-3 bg-ink-900"><p class="text-sm font-medium">Muted</p><p class="mono text-xs text-muted">#8A919C · 6.2:1</p></div></div>
+        <div class="swatch rounded-xl overflow-hidden border border-line"><div class="h-24" style="background:#ECEDEF"></div><div class="p-3 bg-ink-900"><p class="text-sm font-medium">Text</p><p class="mono text-xs text-muted">#ECEDEF · 16.7:1</p></div></div>
+      </div>
+
+      <div class="mt-10 surface-1 rounded-2xl p-6">
+        <p class="eyebrow mb-4">Proportion</p>
+        <div class="flex h-4 rounded-full overflow-hidden">
+          <div style="width:62%; background:#0A0C0F"></div><div style="width:18%; background:#111419"></div><div style="width:8%; background:#181C23"></div><div style="width:7%; background:#ECEDEF"></div><div style="width:4%; background:var(--signal)"></div><div style="width:1%; background:var(--flow)"></div>
+        </div>
+        <div class="mt-3 flex flex-wrap gap-x-6 gap-y-1 mono text-xs text-muted"><span>Ink 80%</span><span>Text 7%</span><span class="text-signal">Signal ~4%</span><span style="color:var(--flow)">Flow ~1%</span></div>
+        <ul class="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm text-muted">
+          <li>✓ <span class="text-text">Lime text on ink only</span>, never on white or teal.</li>
+          <li>✓ <span class="text-text">One lime CTA per viewport.</span> Everything else is secondary.</li>
+          <li>✕ Never use lime and ember side by side as equals.</li>
+          <li>✕ No default Tailwind blues or indigos. Ever.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 Typography -->
+    <section id="type" class="py-24 border-t border-line">
+      <div class="mb-12"><p class="eyebrow mb-3">02 — Typography</p><h2 class="h-display text-[40px] sm:text-[56px]">Three voices, <em>one rhythm</em></h2></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="surface-1 rounded-2xl p-6 sm:p-8 lg:col-span-2">
+          <div class="flex justify-between eyebrow"><span>Display</span><span>Google Fonts</span></div>
+          <p class="h-display text-[96px] sm:text-[140px] leading-none mt-6">Aa <em class="text-signal">Aa</em></p>
+          <p class="text-2xl mt-6 font-medium">Instrument Serif</p>
+          <p class="text-muted text-sm mt-1">Regular + Italic · H1 & H2 only · tracking −0.03em · line-height 1.02. Use italic for the one word that matters.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="surface-1 rounded-2xl p-6 flex-1">
+            <div class="flex justify-between eyebrow"><span>Body / UI</span></div>
+            <p class="text-6xl mt-4 font-medium tracking-tight">Aa</p>
+            <p class="text-xl mt-4 font-medium">Geist</p>
+            <p class="text-muted text-sm">400 · 500 · 600 · line-height 1.7</p>
+          </div>
+          <div class="surface-1 rounded-2xl p-6 flex-1">
+            <div class="flex justify-between eyebrow"><span>Data / Labels</span></div>
+            <p class="mono text-5xl mt-4">01→</p>
+            <p class="text-xl mt-4 font-medium">JetBrains Mono</p>
+            <p class="text-muted text-sm">Eyebrows, stats, node labels · UPPERCASE +0.08em</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 surface-1 rounded-2xl divide-y divide-[color:var(--line)]">
+        <div class="grid grid-cols-[88px_1fr] sm:grid-cols-[140px_1fr_180px] items-baseline gap-4 p-6"><span class="eyebrow">H1</span><p class="h-display text-[48px] sm:text-[88px] truncate">Stop doing it <em>by hand.</em></p><span class="hidden sm:block mono text-xs text-muted text-right">Serif · 48 → 88px</span></div>
+        <div class="grid grid-cols-[88px_1fr] sm:grid-cols-[140px_1fr_180px] items-baseline gap-4 p-6"><span class="eyebrow">H2</span><p class="h-display text-[36px] sm:text-[56px]">What I automate</p><span class="hidden sm:block mono text-xs text-muted text-right">Serif · 36 → 56px</span></div>
+        <div class="grid grid-cols-[88px_1fr] sm:grid-cols-[140px_1fr_180px] items-baseline gap-4 p-6"><span class="eyebrow">H3</span><p class="text-[22px] sm:text-[26px] font-medium tracking-tight leading-snug">Sales &amp; lead automation</p><span class="hidden sm:block mono text-xs text-muted text-right">Geist 500 · 22 → 26px</span></div>
+        <div class="grid grid-cols-[88px_1fr] sm:grid-cols-[140px_1fr_180px] items-baseline gap-4 p-6"><span class="eyebrow">Body</span><p class="text-base sm:text-lg text-muted max-w-[65ch]">Every new lead gets a personal reply in under a minute and a call booked on your calendar — while your team works on what actually needs a human.</p><span class="hidden sm:block mono text-xs text-muted text-right">Geist 400 · 16 → 18px</span></div>
+        <div class="grid grid-cols-[88px_1fr] sm:grid-cols-[140px_1fr_180px] items-baseline gap-4 p-6"><span class="eyebrow">Small</span><p class="text-sm text-muted">Typical build: 1–3 weeks. Fixed scope, fixed price.</p><span class="hidden sm:block mono text-xs text-muted text-right">Geist 400 · 14px</span></div>
+        <div class="grid grid-cols-[88px_1fr] sm:grid-cols-[140px_1fr_180px] items-baseline gap-4 p-6"><span class="eyebrow">Eyebrow</span><p class="eyebrow !text-text">03 — Process</p><span class="hidden sm:block mono text-xs text-muted text-right">Mono 12px · +0.08em</span></div>
+        <div class="grid grid-cols-[88px_1fr] sm:grid-cols-[140px_1fr_180px] items-baseline gap-4 p-6"><span class="eyebrow">Stat</span><p class="mono text-5xl sm:text-6xl tracking-tight text-signal">−20%</p><span class="hidden sm:block mono text-xs text-muted text-right">Mono 500 · 48 → 64px</span></div>
+      </div>
+    </section>
+
+    <!-- 03 Buttons -->
+    <section id="buttons" class="py-24 border-t border-line">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+        <div><p class="eyebrow mb-3">03 — Buttonography</p><h2 class="h-display text-[40px] sm:text-[56px]">Every press <em>feels engineered</em></h2></div>
+        <p class="text-muted max-w-sm text-sm">Hover the live row. Only <span class="mono text-text">transform</span> and <span class="mono text-text">opacity</span> animate, on a spring curve <span class="mono text-text">cubic-bezier(.34,1.56,.64,1)</span>.</p>
+      </div>
+
+      <!-- Live -->
+      <div class="surface-2 rounded-2xl p-6 sm:p-10 mb-4">
+        <p class="eyebrow mb-6">Live — try hover, Tab and click</p>
+        <div class="flex flex-wrap items-center gap-4">
+          <button class="btn btn-primary btn-lg">Book a free audit <span class="arrow">→</span></button>
+          <button class="btn btn-secondary btn-lg">See how it works</button>
+          <a href="#buttons" class="btn btn-ghost text-base"><span class="relative pr-0">Read the case study<span class="underline-anim"></span></span><span class="arrow">→</span></a>
+          <button class="btn btn-icon" aria-label="Open menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+        </div>
+      </div>
+
+      <!-- State matrix -->
+      <div class="surface-1 rounded-2xl overflow-x-auto">
+        <table class="w-full min-w-[760px] text-left">
+          <thead><tr class="border-b border-line">
+            <th class="eyebrow p-5 font-normal">Variant</th><th class="eyebrow p-5 font-normal">Default</th><th class="eyebrow p-5 font-normal">Hover</th><th class="eyebrow p-5 font-normal">Focus-visible</th><th class="eyebrow p-5 font-normal">Active</th><th class="eyebrow p-5 font-normal">Disabled</th>
+          </tr></thead>
+          <tbody class="divide-y divide-[color:var(--line)]">
+            <tr>
+              <td class="p-5 align-middle"><p class="font-medium">Primary</p><p class="text-xs text-muted">One per view</p></td>
+              <td class="p-5"><span class="btn btn-primary btn-md">Book a call <span class="arrow">→</span></span></td>
+              <td class="p-5"><span class="btn btn-primary btn-md is-hover">Book a call <span class="arrow">→</span></span></td>
+              <td class="p-5"><span class="btn btn-primary btn-md is-focus">Book a call <span class="arrow">→</span></span></td>
+              <td class="p-5"><span class="btn btn-primary btn-md is-active">Book a call <span class="arrow">→</span></span></td>
+              <td class="p-5"><span class="btn btn-primary btn-md is-disabled">Book a call <span class="arrow">→</span></span></td>
+            </tr>
+            <tr>
+              <td class="p-5"><p class="font-medium">Secondary</p><p class="text-xs text-muted">Supporting action</p></td>
+              <td class="p-5"><span class="btn btn-secondary btn-md">How it works</span></td>
+              <td class="p-5"><span class="btn btn-secondary btn-md is-hover">How it works</span></td>
+              <td class="p-5"><span class="btn btn-secondary btn-md is-focus">How it works</span></td>
+              <td class="p-5"><span class="btn btn-secondary btn-md is-active">How it works</span></td>
+              <td class="p-5"><span class="btn btn-secondary btn-md is-disabled">How it works</span></td>
+            </tr>
+            <tr>
+              <td class="p-5"><p class="font-medium">Ghost / link</p><p class="text-xs text-muted">Inline &amp; tertiary</p></td>
+              <td class="p-5"><span class="btn btn-ghost text-[15px]"><span class="relative">Details<span class="underline-anim"></span></span><span class="arrow">→</span></span></td>
+              <td class="p-5"><span class="btn btn-ghost text-[15px] is-hover"><span class="relative">Details<span class="underline-anim"></span></span><span class="arrow">→</span></span></td>
+              <td class="p-5"><span class="btn btn-ghost text-[15px] is-focus"><span class="relative">Details<span class="underline-anim"></span></span><span class="arrow">→</span></span></td>
+              <td class="p-5"><span class="btn btn-ghost text-[15px] is-active"><span class="relative">Details<span class="underline-anim"></span></span><span class="arrow">→</span></span></td>
+              <td class="p-5"><span class="btn btn-ghost text-[15px] is-disabled"><span class="relative">Details<span class="underline-anim"></span></span><span class="arrow">→</span></span></td>
+            </tr>
+            <tr>
+              <td class="p-5"><p class="font-medium">Icon</p><p class="text-xs text-muted">Menu, toggles</p></td>
+              <td class="p-5"><span class="btn btn-icon">+</span></td>
+              <td class="p-5"><span class="btn btn-icon is-hover">+</span></td>
+              <td class="p-5"><span class="btn btn-icon is-focus">+</span></td>
+              <td class="p-5"><span class="btn btn-icon is-active">+</span></td>
+              <td class="p-5"><span class="btn btn-icon is-disabled">+</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Sizes + specs -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+        <div class="surface-1 rounded-2xl p-6 sm:p-8">
+          <p class="eyebrow mb-6">Sizes</p>
+          <div class="flex flex-wrap items-end gap-4">
+            <div><span class="btn btn-primary btn-sm">Small <span class="arrow">→</span></span><p class="mono text-xs text-muted mt-2">sm · 36px · 14px</p></div>
+            <div><span class="btn btn-primary btn-md">Medium <span class="arrow">→</span></span><p class="mono text-xs text-muted mt-2">md · 44px · 15px</p></div>
+            <div><span class="btn btn-primary btn-lg">Large <span class="arrow">→</span></span><p class="mono text-xs text-muted mt-2">lg · 52px · 16px</p></div>
+          </div>
+        </div>
+        <div class="surface-1 rounded-2xl p-6 sm:p-8">
+          <p class="eyebrow mb-4">State spec</p>
+          <dl class="grid grid-cols-[110px_1fr] gap-y-2 text-sm">
+            <dt class="mono text-muted">Hover</dt><dd>translateY(−1px), glow intensifies, arrow +3px</dd>
+            <dt class="mono text-muted">Focus</dt><dd>2px lime ring, 3px ink offset</dd>
+            <dt class="mono text-muted">Active</dt><dd>scale(0.98), 100ms</dd>
+            <dt class="mono text-muted">Disabled</dt><dd>opacity 0.4, no pointer events</dd>
+            <dt class="mono text-muted">Radius</dt><dd>12px buttons · 16px cards · 999px tags</dd>
+            <dt class="mono text-muted">Copy</dt><dd>Verb first, sentence case, ≤ 4 words</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 System -->
+    <section id="system" class="py-24 border-t border-line">
+      <div class="mb-12"><p class="eyebrow mb-3">04 — System</p><h2 class="h-display text-[40px] sm:text-[56px]">Space, depth &amp; <em>mark</em></h2></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="surface-1 rounded-2xl p-6 sm:p-8">
+          <p class="eyebrow mb-6">Spacing scale · 4px base</p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-4"><span class="mono text-xs text-muted w-14">s-1 · 4</span><span class="h-3 rounded-sm bg-signal" style="width:4px"></span></div>
+            <div class="flex items-center gap-4"><span class="mono text-xs text-muted w-14">s-2 · 8</span><span class="h-3 rounded-sm bg-signal" style="width:8px"></span></div>
+            <div class="flex items-center gap-4"><span class="mono text-xs text-muted w-14">s-4 · 16</span><span class="h-3 rounded-sm bg-signal" style="width:16px"></span></div>
+            <div class="flex items-center gap-4"><span class="mono text-xs text-muted w-14">s-6 · 24</span><span class="h-3 rounded-sm bg-signal" style="width:24px"></span></div>
+            <div class="flex items-center gap-4"><span class="mono text-xs text-muted w-14">s-8 · 32</span><span class="h-3 rounded-sm bg-signal" style="width:32px"></span></div>
+            <div class="flex items-center gap-4"><span class="mono text-xs text-muted w-14">s-12 · 48</span><span class="h-3 rounded-sm bg-signal" style="width:48px"></span></div>
+            <div class="flex items-center gap-4"><span class="mono text-xs text-muted w-14">s-16 · 64</span><span class="h-3 rounded-sm bg-signal" style="width:64px"></span></div>
+            <div class="flex items-center gap-4"><span class="mono text-xs text-muted w-14">s-24 · 96</span><span class="h-3 rounded-sm bg-signal" style="width:96px"></span></div>
+            <div class="flex items-center gap-4"><span class="mono text-xs text-muted w-14">s-32 · 128</span><span class="h-3 rounded-sm bg-signal" style="width:128px"></span></div>
+          </div>
+          <p class="text-sm text-muted mt-6">Sections: 96px vertical (s-24). Card padding: 24–32px. Grid gap: 16px.</p>
+        </div>
+
+        <div class="surface-1 rounded-2xl p-6 sm:p-8">
+          <p class="eyebrow mb-6">Elevation · three planes</p>
+          <div class="relative h-[300px] rounded-xl" style="background:var(--ink-950); border:1px solid var(--line)">
+            <span class="absolute top-3 left-4 mono text-xs text-muted">0 · base / ink-950</span>
+            <div class="absolute left-6 right-10 top-12 bottom-14 rounded-xl surface-1 p-4"><span class="mono text-xs text-muted">1 · elevated / ink-900 — cards</span></div>
+            <div class="absolute right-4 bottom-6 w-[58%] rounded-xl surface-2 p-4"><span class="mono text-xs text-muted">2 · floating / ink-800 — nav, popovers, nodes</span></div>
+          </div>
+          <p class="text-sm text-muted mt-6">Shadows are black at low opacity with a 1px inner highlight; floating surfaces add a faint lime rim.</p>
+        </div>
+
+        <div class="surface-1 rounded-2xl p-6 sm:p-8 lg:col-span-2">
+          <p class="eyebrow mb-6">Mark</p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="rounded-xl p-8 grid place-items-center" style="background:var(--ink-950); border:1px solid var(--line)">
+              <div class="flex items-center gap-3"><span class="relative grid place-items-center w-11 h-11 rounded-xl surface-2 mono text-[15px] font-medium">HA<span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full" style="background:var(--signal); box-shadow:0 0 12px var(--signal)"></span></span><span class="text-xl font-medium tracking-tight">Hashir Adnan</span></div>
+            </div>
+            <div class="rounded-xl p-8 grid place-items-center" style="background:var(--signal)">
+              <div class="flex items-center gap-3 text-ink-950"><span class="relative grid place-items-center w-11 h-11 rounded-xl mono text-[15px] font-medium" style="background:var(--ink-950); color:var(--signal)">HA</span><span class="text-xl font-medium tracking-tight">Hashir Adnan</span></div>
+            </div>
+            <div class="rounded-xl p-8 grid place-items-center" style="background:var(--ink-950); border:1px solid var(--line)">
+              <span class="relative grid place-items-center w-16 h-16 rounded-2xl surface-2 mono text-xl font-medium">HA<span class="absolute -top-1 -right-1 w-3 h-3 rounded-full" style="background:var(--signal); box-shadow:0 0 14px var(--signal)"></span></span>
+            </div>
+          </div>
+          <p class="text-sm text-muted mt-4">The monogram is a workflow node; the lime dot is the signal. Minimum clear space = the height of the dot × 2. Never recolor the dot.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Voice -->
+    <section id="voice" class="py-24 border-t border-line">
+      <div class="mb-12"><p class="eyebrow mb-3">05 — Voice</p><h2 class="h-display text-[40px] sm:text-[56px]">Say it like <em>an engineer</em> would</h2></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="surface-1 rounded-2xl p-6 sm:p-8"><p class="eyebrow mb-4" style="color:var(--signal)">✓ Do</p>
+          <ul class="space-y-3 text-text"><li>"Every lead gets a reply in under a minute."</li><li>"Cut manual effort by 20% for a US-based team."</li><li>"Fixed scope. Fixed price. Live in 2–3 weeks."</li></ul></div>
+        <div class="surface-1 rounded-2xl p-6 sm:p-8"><p class="eyebrow mb-4" style="color:var(--ember)">✕ Don't</p>
+          <ul class="space-y-3 text-muted"><li>"Revolutionize your business with cutting-edge AI synergy."</li><li>"10x your productivity overnight!!"</li><li>Jargon without an outcome attached.</li></ul></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 py-10 flex flex-col sm:flex-row justify-between gap-4 text-sm text-muted">
+      <span>Hashir Adnan — AI Automation · Brand guidelines v1.0</span>
+      <a class="navlink" href="index.html">Back to site →</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

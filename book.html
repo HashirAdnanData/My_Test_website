@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Free Automation Audit — Hashir Adnan</title>
+<meta name="description" content="Book a free 30-minute automation audit. Find out where AI automation can save your business time and money.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: { 950: '#0A0C0F', 900: '#111419', 800: '#181C23' },
+          line: '#252A33', text: '#ECEDEF', muted: '#8A919C',
+          signal: { DEFAULT: '#C8F542', 600: '#A9D61F' },
+          flow: '#3DDBC4', ember: '#FF6A3D',
+        },
+        fontFamily: {
+          display: ['"Instrument Serif"', 'Georgia', 'serif'],
+          sans: ['Geist', 'system-ui', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root {
+    --ink-950:#0A0C0F; --ink-900:#111419; --ink-800:#181C23; --line:#252A33;
+    --text:#ECEDEF; --muted:#8A919C; --signal:#C8F542; --signal-600:#A9D61F;
+    --flow:#3DDBC4; --ember:#FF6A3D;
+    --spring: cubic-bezier(.34,1.56,.64,1);
+    --ease-out: cubic-bezier(.16,1,.3,1);
+    --shadow-elev: 0 1px 0 rgba(255,255,255,.04) inset, 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -8px rgba(0,0,0,.5);
+    --shadow-float: 0 1px 0 rgba(255,255,255,.06) inset, 0 2px 4px rgba(0,0,0,.35), 0 24px 48px -12px rgba(0,0,0,.65), 0 0 0 1px rgba(200,245,66,.04);
+  }
+  html { background: var(--ink-950); color-scheme: dark; scroll-padding-top: 140px; }
+  .input, .chip input { scroll-margin-top: 140px; }
+  body { background: var(--ink-950); color: var(--text); font-family: Geist, system-ui, sans-serif; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  ::selection { background: var(--signal); color: var(--ink-950); }
+  .grain::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:60; opacity:.06; mix-blend-mode: overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .page-bg { background:
+      radial-gradient(45% 50% at 85% 10%, rgba(200,245,66,.10), transparent 60%),
+      radial-gradient(35% 45% at 0% 30%, rgba(61,219,196,.07), transparent 60%),
+      radial-gradient(60% 40% at 50% 110%, rgba(200,245,66,.05), transparent 60%); }
+  .grid-lines { background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 56px 56px;
+    mask-image: radial-gradient(60% 50% at 30% 20%, #000 20%, transparent 75%); -webkit-mask-image: radial-gradient(60% 50% at 30% 20%, #000 20%, transparent 75%); }
+  .h-display { font-family:"Instrument Serif", Georgia, serif; font-weight:400; letter-spacing:-0.03em; line-height:1.02; }
+  .eyebrow { font-family:"JetBrains Mono", monospace; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color: var(--muted); }
+  .mono { font-family:"JetBrains Mono", monospace; }
+  .surface-1 { background: var(--ink-900); border:1px solid var(--line); box-shadow: var(--shadow-elev); }
+  .surface-2 { background: var(--ink-800); border:1px solid var(--line); box-shadow: var(--shadow-float); }
+
+  /* Buttons */
+  .btn { position:relative; display:inline-flex; align-items:center; justify-content:center; gap:10px; font-weight:500; border-radius:12px; white-space:nowrap; cursor:pointer; outline:none; border:0;
+    transition: transform .35s var(--spring), opacity .2s; }
+  .btn .arrow { display:inline-block; transition: transform .35s var(--spring); }
+  .btn::after { content:""; position:absolute; inset:0; border-radius:inherit; opacity:0; transition: opacity .3s var(--ease-out); pointer-events:none; }
+  .btn-sm { height:36px; padding:0 14px; font-size:14px; }
+  .btn-md { height:44px; padding:0 20px; font-size:15px; }
+  .btn-lg { height:52px; padding:0 26px; font-size:16px; }
+  .btn-primary { background: var(--signal); color: var(--ink-950);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -1px 0 rgba(0,0,0,.12), 0 1px 2px rgba(10,12,15,.5), 0 8px 24px -6px rgba(200,245,66,.35); }
+  .btn-primary::after { box-shadow: 0 0 0 1px rgba(200,245,66,.5), 0 12px 36px -4px rgba(200,245,66,.55); }
+  .btn-secondary { background: rgba(255,255,255,.02); color: var(--text); box-shadow: inset 0 0 0 1px var(--line); }
+  .btn-secondary::after { box-shadow: inset 0 0 0 1px rgba(200,245,66,.6); }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:hover::after { opacity:1; }
+  .btn:hover .arrow { transform: translateX(3px); }
+  .btn:focus-visible { box-shadow: 0 0 0 3px var(--ink-950), 0 0 0 5px var(--signal); }
+  .btn:active { transform: scale(.98); transition-duration:.1s; }
+  .btn:disabled { opacity:.5; pointer-events:none; }
+  .navlink { color: var(--muted); border-radius:6px; outline:none; transition: opacity .2s; }
+  .navlink:hover { color: var(--text); }
+  .navlink:focus-visible { box-shadow: 0 0 0 2px var(--signal); color: var(--text); }
+  .navlink:active { opacity:.6; }
+
+  /* Form */
+  .field-label { display:block; font-size:14px; font-weight:500; margin-bottom:8px; color: var(--text); }
+  .field-label .opt { color: var(--muted); font-weight:400; }
+  .input { width:100%; height:48px; padding:0 14px; border-radius:12px; background: var(--ink-950); color: var(--text); font-size:15px;
+    border:1px solid var(--line); outline:none; box-shadow: inset 0 1px 2px rgba(0,0,0,.4); transition: border-color .2s, box-shadow .2s; }
+  textarea.input { height:auto; min-height:120px; padding:12px 14px; line-height:1.6; resize:vertical; }
+  select.input { appearance:none; -webkit-appearance:none; padding-right:40px; cursor:pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238A919C' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position: right 14px center; }
+  .input::placeholder { color: #5C636D; }
+  .input:hover { border-color: #353B46; }
+  .input:focus { border-color: var(--signal); box-shadow: 0 0 0 3px rgba(200,245,66,.15); }
+  .input[aria-invalid="true"] { border-color: var(--ember); box-shadow: 0 0 0 3px rgba(255,106,61,.12); }
+  .error-msg { display:none; margin-top:6px; font-size:13px; color: var(--ember); }
+  .has-error .error-msg { display:block; }
+
+  .chip input { position:absolute; opacity:0; pointer-events:none; }
+  .chip span { display:inline-flex; align-items:center; gap:8px; height:38px; padding:0 14px; border-radius:999px; font-size:14px; cursor:pointer; user-select:none;
+    background: var(--ink-950); border:1px solid var(--line); color: var(--muted); transition: transform .3s var(--spring), border-color .2s, color .2s, background-color .2s; }
+  .chip span::before { content:""; width:8px; height:8px; border-radius:999px; border:1px solid #4A515C; transition: background-color .2s, border-color .2s; }
+  .chip:hover span { color: var(--text); border-color:#353B46; transform: translateY(-1px); }
+  .chip input:focus-visible + span { box-shadow: 0 0 0 2px var(--ink-950), 0 0 0 4px var(--signal); }
+  .chip:active span { transform: scale(.97); }
+  .chip input:checked + span { color: var(--text); border-color: rgba(200,245,66,.55); background: rgba(200,245,66,.08); }
+  .chip input:checked + span::before { background: var(--signal); border-color: var(--signal); box-shadow: 0 0 8px var(--signal); }
+
+  /* Segmented control (shown only when Calendly is configured) */
+  .seg button { position:relative; z-index:1; height:40px; padding:0 16px; border-radius:10px; font-size:14px; font-weight:500; color: var(--muted); outline:none; transition: opacity .2s; }
+  .seg button:hover { color: var(--text); }
+  .seg button:focus-visible { box-shadow: 0 0 0 2px var(--signal); }
+  .seg button:active { opacity:.7; }
+  .seg button[aria-selected="true"] { color: var(--ink-950); }
+  .seg .thumb { position:absolute; top:4px; bottom:4px; left:4px; border-radius:10px; background: var(--signal); transition: transform .45s var(--spring); }
+
+  [data-reveal] { opacity:0; transform: translateY(16px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); }
+  [data-reveal].is-in { opacity:1; transform:none; }
+  .panel-enter { animation: panelIn .6s var(--ease-out) both; }
+  @keyframes panelIn { from { opacity:0; transform: translateY(12px); } to { opacity:1; transform:none; } }
+  .check-pop { animation: pop .7s var(--spring) both; }
+  @keyframes pop { from { opacity:0; transform: scale(.5); } to { opacity:1; transform: scale(1); } }
+  .blink { animation: blink 1.4s steps(2) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .spinner { width:16px; height:16px; border-radius:999px; border:2px solid rgba(10,12,15,.25); border-top-color: var(--ink-950); animation: spin .8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation:none !important; transition-duration:0s !important; } [data-reveal] { opacity:1; transform:none; } }
+</style>
+</head>
+<body class="grain">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 px-4 pt-3">
+  <div class="relative max-w-6xl mx-auto h-14 flex items-center justify-between rounded-2xl px-3 sm:px-4 surface-2" style="background:rgba(24,28,35,.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+    <a href="index.html" class="navlink flex items-center gap-3 !text-text" aria-label="Hashir Adnan — home">
+      <span class="relative grid place-items-center w-8 h-8 rounded-lg surface-2 mono text-[12px] font-medium">HA<span class="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full" style="background:var(--signal); box-shadow:0 0 10px var(--signal)"></span></span>
+      <span class="font-medium tracking-tight">Hashir Adnan</span>
+    </a>
+    <a href="index.html" class="btn btn-secondary btn-sm"><span class="arrow">←</span> Back to site</a>
+  </div>
+</header>
+
+<main class="relative page-bg min-h-screen pt-32 pb-24 sm:pt-36">
+  <div class="absolute inset-0 grid-lines pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-16 items-start">
+
+    <!-- LEFT: pitch -->
+    <aside class="lg:sticky lg:top-28">
+      <p class="eyebrow mb-6 flex items-center gap-2" data-reveal><span class="inline-block w-1.5 h-1.5 rounded-full bg-signal blink"></span>Free · 30 minutes · No obligation</p>
+      <h1 class="h-display text-[48px] sm:text-[64px] lg:text-[72px]" data-reveal>Book your free <em class="text-signal">automation audit.</em></h1>
+      <p class="mt-6 text-lg text-muted max-w-[52ch]" data-reveal>Tell me a little about your business and I'll come to the call with ideas already in hand. You'll leave knowing exactly where AI can save you time and money — whether or not we work together.</p>
+
+      <div class="mt-10 surface-1 rounded-2xl p-6" data-reveal>
+        <p class="eyebrow mb-4">On the call, you'll get</p>
+        <ul class="space-y-3 text-[15px]">
+          <li class="flex gap-3"><span class="text-signal mt-0.5">✓</span><span>Your <span class="text-text font-medium">top 3 automation opportunities</span>, ranked by impact</span></li>
+          <li class="flex gap-3"><span class="text-signal mt-0.5">✓</span><span>An honest estimate of the <span class="text-text font-medium">hours and money</span> each would save</span></li>
+          <li class="flex gap-3"><span class="text-signal mt-0.5">✓</span><span>A clear next step — <span class="text-text font-medium">no sales pressure</span></span></li>
+        </ul>
+      </div>
+
+      <ol class="mt-8 space-y-5" data-reveal>
+        <li class="flex gap-4">
+          <span class="grid place-items-center shrink-0 w-8 h-8 rounded-full mono text-xs" style="background:var(--signal); color:var(--ink-950)">01</span>
+          <div><p class="font-medium leading-tight">Send your request</p><p class="text-sm text-muted">Takes about 2 minutes.</p></div>
+        </li>
+        <li class="flex gap-4">
+          <span class="grid place-items-center shrink-0 w-8 h-8 rounded-full surface-2 mono text-xs">02</span>
+          <div><p class="font-medium leading-tight">I confirm a time</p><p class="text-sm text-muted">Within 24 hours, with a calendar invite.</p></div>
+        </li>
+        <li class="flex gap-4">
+          <span class="grid place-items-center shrink-0 w-8 h-8 rounded-full surface-2 mono text-xs">03</span>
+          <div><p class="font-medium leading-tight">We talk for 30 minutes</p><p class="text-sm text-muted">Google Meet or Zoom — your choice.</p></div>
+        </li>
+      </ol>
+    </aside>
+
+    <!-- RIGHT: booking -->
+    <section aria-label="Booking" data-reveal>
+      <!-- Mode switch (only visible if a Calendly link is configured) -->
+      <div id="modeSwitch" class="hidden mb-4">
+        <div class="seg relative inline-flex p-1 rounded-xl surface-1" role="tablist" aria-label="Booking method">
+          <span class="thumb" aria-hidden="true"></span>
+          <button type="button" role="tab" id="tabCal" aria-selected="true" aria-controls="calPanel">Pick a time</button>
+          <button type="button" role="tab" id="tabForm" aria-selected="false" aria-controls="formPanel">Send a request</button>
+        </div>
+      </div>
+
+      <!-- Calendly panel -->
+      <div id="calPanel" class="hidden surface-2 rounded-3xl overflow-hidden" role="tabpanel" aria-labelledby="tabCal">
+        <div id="calendlyEmbed" style="min-width:320px; height:720px;"></div>
+      </div>
+
+      <!-- Form panel -->
+      <div id="formPanel" class="surface-2 rounded-3xl p-6 sm:p-10" role="tabpanel" aria-labelledby="tabForm">
+        <form id="bookForm" novalidate>
+          <div class="flex items-center justify-between gap-4 pb-6 mb-8 border-b border-line">
+            <div>
+              <h2 class="text-[22px] sm:text-[26px] font-medium tracking-tight leading-tight">Request your free audit</h2>
+              <p class="text-sm text-muted mt-1">Fields marked <span class="text-signal">*</span> are required.</p>
+            </div>
+            <span class="hidden sm:inline-flex mono text-[10px] px-2.5 py-1 rounded-full shrink-0" style="background:rgba(200,245,66,.12); color:var(--signal)">REPLY &lt; 24H</span>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="field">
+              <label class="field-label" for="name">Full name <span class="text-signal">*</span></label>
+              <input class="input" id="name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" required>
+              <p class="error-msg">Please enter your name.</p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="email">Work email <span class="text-signal">*</span></label>
+              <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="jane@company.com" required>
+              <p class="error-msg">Please enter a valid email address.</p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="company">Company <span class="opt">(optional)</span></label>
+              <input class="input" id="company" name="company" type="text" autocomplete="organization" placeholder="Acme Co.">
+            </div>
+            <div class="field">
+              <label class="field-label" for="website">Website <span class="opt">(optional)</span></label>
+              <input class="input" id="website" name="website" type="text" autocomplete="url" placeholder="acme.com">
+            </div>
+          </div>
+
+          <fieldset class="field mt-7" id="areasField">
+            <legend class="field-label">What would you like to automate? <span class="text-signal">*</span></legend>
+            <div class="flex flex-wrap gap-2 mt-1">
+              <label class="chip relative"><input type="checkbox" name="areas" value="Lead follow-up"><span>Lead follow-up</span></label>
+              <label class="chip relative"><input type="checkbox" name="areas" value="Customer support"><span>Customer support</span></label>
+              <label class="chip relative"><input type="checkbox" name="areas" value="Appointment booking"><span>Appointment booking</span></label>
+              <label class="chip relative"><input type="checkbox" name="areas" value="Email & inbox"><span>Email &amp; inbox</span></label>
+              <label class="chip relative"><input type="checkbox" name="areas" value="Sales & CRM"><span>Sales &amp; CRM</span></label>
+              <label class="chip relative"><input type="checkbox" name="areas" value="Onboarding & admin"><span>Onboarding &amp; admin</span></label>
+              <label class="chip relative"><input type="checkbox" name="areas" value="Invoicing & payments"><span>Invoicing &amp; payments</span></label>
+              <label class="chip relative"><input type="checkbox" name="areas" value="Content & social"><span>Content &amp; social</span></label>
+              <label class="chip relative"><input type="checkbox" name="areas" value="Not sure yet"><span>Not sure yet</span></label>
+            </div>
+            <p class="error-msg">Pick at least one — "Not sure yet" is fine too.</p>
+          </fieldset>
+
+          <div class="grid sm:grid-cols-2 gap-5 mt-7">
+            <div class="field">
+              <label class="field-label" for="teamSize">Team size</label>
+              <select class="input" id="teamSize" name="teamSize">
+                <option>Just me</option>
+                <option selected>2–10 people</option>
+                <option>11–50 people</option>
+                <option>51–200 people</option>
+                <option>200+ people</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field-label" for="hours">Hours lost to repetitive work, weekly</label>
+              <select class="input" id="hours" name="hours">
+                <option>Under 5 hours</option>
+                <option selected>5–15 hours</option>
+                <option>15–40 hours</option>
+                <option>40+ hours</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5 mt-5">
+            <div class="field">
+              <label class="field-label" for="date">Preferred date <span class="text-signal">*</span></label>
+              <input class="input" id="date" name="date" type="date" required>
+              <p class="error-msg">Please choose a date from today onwards.</p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="time">Preferred time</label>
+              <select class="input" id="time" name="time">
+                <option>Morning (9am – 12pm)</option>
+                <option selected>Afternoon (12pm – 5pm)</option>
+                <option>Evening (5pm – 8pm)</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+          </div>
+          <p class="mt-2 text-xs text-muted mono">Your timezone: <span id="tzLabel" class="text-text">—</span></p>
+
+          <div class="field mt-7">
+            <label class="field-label" for="message">What's the task that eats the most time? <span class="opt">(optional)</span></label>
+            <textarea class="input" id="message" name="message" placeholder="e.g. We reply to every new enquiry by hand and follow up in a spreadsheet — it takes about two hours a day."></textarea>
+          </div>
+
+          <!-- honeypot -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+
+          <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
+            <button type="submit" id="submitBtn" class="btn btn-primary btn-lg w-full sm:w-auto">
+              <span class="btn-label">Request my free audit</span> <span class="arrow">→</span>
+            </button>
+            <p class="text-xs text-muted">No spam, ever. Your details are only used to arrange the call.</p>
+          </div>
+          <p id="formError" class="hidden mt-4 text-sm" style="color:var(--ember)">Something went wrong sending your request. Please try again in a moment.</p>
+        </form>
+
+        <!-- Success -->
+        <div id="successPanel" class="hidden text-center py-10 sm:py-16" role="status" aria-live="polite">
+          <span class="check-pop mx-auto grid place-items-center w-16 h-16 rounded-2xl text-2xl" style="background:rgba(200,245,66,.12); color:var(--signal); box-shadow: 0 0 0 1px rgba(200,245,66,.35), 0 20px 50px -15px rgba(200,245,66,.4);">✓</span>
+          <h2 class="h-display text-[40px] sm:text-[52px] mt-8">You're <em class="text-signal">on the list.</em></h2>
+          <p id="successText" class="mt-4 text-muted max-w-md mx-auto">Thanks — I'll reply within 24 hours to confirm a time and send a calendar invite.</p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="index.html" class="btn btn-secondary btn-md"><span class="arrow">←</span> Back to the site</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-6 text-sm text-muted text-center lg:text-left">Prefer to connect first? <a class="navlink !text-text underline decoration-[color:var(--line)] underline-offset-4" href="https://www.linkedin.com/" target="_blank" rel="noopener">Message me on LinkedIn ↗</a></p>
+    </section>
+  </div>
+</main>
+
+<footer class="border-t border-line">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-8 flex flex-col sm:flex-row justify-between gap-4 text-sm text-muted">
+    <span>© 2026 Hashir Adnan · AI Automation</span>
+    <a class="navlink" href="index.html">Back to site →</a>
+  </div>
+</footer>
+
+<script>
+  /* ================= CONFIG =================
+     calendlyUrl  → paste your Calendly event link, e.g. "https://calendly.com/your-name/30min".
+                    When set, visitors can pick a time directly (the form stays as a fallback tab).
+     formEndpoint → a form service URL (e.g. Formspree "https://formspree.io/f/xxxxxx").
+                    Requests are forwarded to your inbox without your email address ever
+                    appearing on the site. REQUIRED for the form to deliver requests.
+  ============================================ */
+  const CONFIG = {
+    calendlyUrl: '',
+    formEndpoint: '',
+  };
+
+  // Reveal
+  requestAnimationFrame(() => document.querySelectorAll('[data-reveal]').forEach((el, i) => {
+    el.style.transitionDelay = (i * 70) + 'ms'; el.classList.add('is-in');
+  }));
+
+  // Timezone + date min
+  const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Unknown';
+  document.getElementById('tzLabel').textContent = tz;
+  const dateInput = document.getElementById('date');
+  const today = new Date(); today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+  dateInput.min = today.toISOString().slice(0, 10);
+
+  // ---------- Calendly mode ----------
+  const calPanel = document.getElementById('calPanel');
+  const formPanel = document.getElementById('formPanel');
+  if (CONFIG.calendlyUrl) {
+    document.getElementById('modeSwitch').classList.remove('hidden');
+    const link = document.createElement('link');
+    link.rel = 'stylesheet'; link.href = 'https://assets.calendly.com/assets/external/widget.css';
+    document.head.appendChild(link);
+    const s = document.createElement('script');
+    s.src = 'https://assets.calendly.com/assets/external/widget.js';
+    s.onload = () => Calendly.initInlineWidget({
+      url: CONFIG.calendlyUrl + (CONFIG.calendlyUrl.includes('?') ? '&' : '?') + 'hide_gdpr_banner=1&background_color=181c23&text_color=ecedef&primary_color=c8f542',
+      parentElement: document.getElementById('calendlyEmbed'),
+    });
+    document.body.appendChild(s);
+
+    const tabs = { cal: document.getElementById('tabCal'), form: document.getElementById('tabForm') };
+    const thumb = document.querySelector('.seg .thumb');
+    const setMode = (mode) => {
+      const isCal = mode === 'cal';
+      tabs.cal.setAttribute('aria-selected', isCal); tabs.form.setAttribute('aria-selected', !isCal);
+      calPanel.classList.toggle('hidden', !isCal); formPanel.classList.toggle('hidden', isCal);
+      (isCal ? calPanel : formPanel).classList.remove('panel-enter'); void (isCal ? calPanel : formPanel).offsetWidth;
+      (isCal ? calPanel : formPanel).classList.add('panel-enter');
+      const active = isCal ? tabs.cal : tabs.form;
+      thumb.style.width = active.offsetWidth + 'px';
+      thumb.style.transform = `translateX(${active.offsetLeft - 4}px)`;
+    };
+    tabs.cal.addEventListener('click', () => setMode('cal'));
+    tabs.form.addEventListener('click', () => setMode('form'));
+    requestAnimationFrame(() => setMode('cal'));
+  }
+
+  // ---------- Form ----------
+  const form = document.getElementById('bookForm');
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function setError(fieldEl, inputEl, bad) {
+    fieldEl.classList.toggle('has-error', bad);
+    if (inputEl) inputEl.setAttribute('aria-invalid', bad ? 'true' : 'false');
+  }
+  function validate() {
+    let firstBad = null;
+    const checks = [
+      ['name', v => v.trim().length > 1],
+      ['email', v => emailRe.test(v.trim())],
+      ['date', v => v && v >= dateInput.min],
+    ];
+    checks.forEach(([id, ok]) => {
+      const el = document.getElementById(id);
+      const bad = !ok(el.value);
+      setError(el.closest('.field'), el, bad);
+      if (bad && !firstBad) firstBad = el;
+    });
+    const areasField = document.getElementById('areasField');
+    const anyArea = form.querySelectorAll('input[name="areas"]:checked').length > 0;
+    setError(areasField, null, !anyArea);
+    if (!anyArea && !firstBad) firstBad = areasField.querySelector('input');
+    if (firstBad) firstBad.focus();
+    return !firstBad;
+  }
+  // Clear errors as the user fixes them
+  form.addEventListener('input', (e) => {
+    const field = e.target.closest('.field');
+    if (field && field.classList.contains('has-error')) {
+      field.classList.remove('has-error');
+      if (e.target.matches('.input')) e.target.setAttribute('aria-invalid', 'false');
+    }
+  });
+
+  function collect() {
+    const fd = new FormData(form);
+    return {
+      name: fd.get('name').trim(),
+      email: fd.get('email').trim(),
+      company: fd.get('company').trim(),
+      website: fd.get('website').trim(),
+      areas: fd.getAll('areas').join(', '),
+      teamSize: fd.get('teamSize'),
+      hoursLost: fd.get('hours'),
+      preferredDate: fd.get('date'),
+      preferredTime: fd.get('time'),
+      timezone: tz,
+      message: fd.get('message').trim(),
+      _gotcha: fd.get('_gotcha'),
+    };
+  }
+
+  function showSuccess(viaEmail) {
+    form.classList.add('hidden');
+    const panel = document.getElementById('successPanel');
+    if (viaEmail) document.getElementById('successText').textContent =
+      "Your email app should have opened with your request filled in — just hit send. I'll reply within 24 hours to confirm a time.";
+    panel.classList.remove('hidden'); panel.classList.add('panel-enter');
+    formPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    document.getElementById('formError').classList.add('hidden');
+    if (!validate()) return;
+    const data = collect();
+    if (data._gotcha) return; // bot
+
+    const btn = document.getElementById('submitBtn');
+    if (!CONFIG.formEndpoint) {
+      console.warn('Booking form: set CONFIG.formEndpoint in book.html so requests are delivered.');
+      const err = document.getElementById('formError');
+      err.textContent = "Online booking isn't switched on yet — please check back shortly.";
+      err.classList.remove('hidden');
+      return;
+    }
+    {
+      btn.disabled = true;
+      btn.querySelector('.btn-label').textContent = 'Sending…';
+      btn.querySelector('.arrow').outerHTML = '<span class="spinner arrow"></span>';
+      try {
+        const { _gotcha, ...payload } = data;
+        const res = await fetch(CONFIG.formEndpoint, {
+          method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ ...payload, _subject: `Free audit request — ${data.name}` }),
+        });
+        if (!res.ok) throw new Error(res.status);
+        showSuccess(false);
+      } catch (err) {
+        btn.disabled = false;
+        btn.querySelector('.btn-label').textContent = 'Request my free audit';
+        btn.querySelector('.spinner').outerHTML = '<span class="arrow">→</span>';
+        document.getElementById('formError').classList.remove('hidden');
+      }
+    }
+  });
+</script>
+</body>
+</html>
